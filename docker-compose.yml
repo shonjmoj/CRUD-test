@@ -1,6 +1,6 @@
 services:
   postgresql:
-    image: bitnami/postgresql
+    image: postgres
     env_file:
       - .env
     ports:

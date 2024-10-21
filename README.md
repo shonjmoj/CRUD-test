@@ -11,10 +11,11 @@
 **- after cloning the repo, create an `.env` file at the root of folder like so :**
 
 ```bash
-POSTGRESQL_PASSWORD="WHATEVER_YOU_LIKE"
-POSTGRESQL_USERNAME="WHATEVER_YOU_LIKE"
+POSTGRE_USER="WHATEVER_YOU_LIKE"
+POSTGRES_PASSWORD="WHATEVER_YOU_LIKE"
+POSTGRES_DB="WHATEVER_YOU_LIKE"
 
-DATABASE_URL="postgresql://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@localhost:5432/mydb?schema=public"
+DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/mydb?schema=public"
 ```
 
 **Then simply run `make` , enjoy ;) !**
