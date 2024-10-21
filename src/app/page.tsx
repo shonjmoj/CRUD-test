@@ -12,18 +12,12 @@ export default async function Home() {
         <h1 className="text-3xl font-bold">CRUD Test</h1>
       </header>
       <main className="px-4 py-8">
-        <div className="mx-auto max-w-lg">
+        <div className="mx-auto max-w-xl">
           <TodoForm />
           {todos?.length > 0 ? (
-            <ul className="mt-4 space-y-4">
-              {todos.map(({ id, title, content, done }) => (
-                <TodoItem
-                  key={id}
-                  id={id}
-                  done={done}
-                  content={content}
-                  title={title}
-                />
+            <ul className="mt-6 space-y-4">
+              {todos.map(({ id, title, done }) => (
+                <TodoItem key={id} id={id} done={done} title={title} />
               ))}
             </ul>
           ) : null}

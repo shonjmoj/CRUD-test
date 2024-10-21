@@ -17,7 +17,6 @@ export const updateTodo = async (
     await prisma.todo.update({
       data: {
         title,
-        content,
       },
       where: {
         id: todoConfig.id,

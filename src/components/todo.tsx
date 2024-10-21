@@ -5,12 +5,7 @@ import { updateTodo } from "@/actions/updateTodo";
 
 import { deleteTodo } from "../actions/deleteTodo";
 
-const TodoItem = ({
-  id,
-  content,
-  title,
-  done,
-}: Pick<Todo, "id" | "title" | "done" | "content">) => {
+const TodoItem = ({ id, title, done }: Pick<Todo, "id" | "title" | "done">) => {
   const updateTodoWithId = updateTodo.bind(null, { id, done });
   const deleteTodoWithId = deleteTodo.bind(null, id);
 
@@ -21,10 +16,10 @@ const TodoItem = ({
     `}
     >
       <div className="flex items-center justify-between">
-        <h3>{title}</h3>
+        <h3 className={`${done && "line-through"}`}>{title}</h3>
         <div className="flex space-x-2">
           <form action={updateTodoWithId}>
-            <Button type="submit">{done ? "To do" : "Done"}</Button>
+            <Button type="submit">{done ? "Todo" : "Done"}</Button>
           </form>
 
           <form action={deleteTodoWithId}>
@@ -32,7 +27,6 @@ const TodoItem = ({
           </form>
         </div>
       </div>
-      <p className="text-sm text-gray-600">{content}</p>
     </li>
   );
 };
