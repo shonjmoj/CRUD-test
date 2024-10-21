@@ -15,7 +15,7 @@ POSTGRE_USER="WHATEVER_YOU_LIKE"
 POSTGRES_PASSWORD="WHATEVER_YOU_LIKE"
 POSTGRES_DB="WHATEVER_YOU_LIKE"
 
-DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/mydb?schema=public"
+DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/${POSTGRES_DB}?schema=public"
 ```
 
 **Then simply run `make` , enjoy ;) !**
