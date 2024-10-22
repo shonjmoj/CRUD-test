@@ -11,7 +11,7 @@
 **- after cloning the repo, create an `.env` file at the root of folder like so :**
 
 ```bash
-POSTGRE_USER="WHATEVER_YOU_LIKE"
+POSTGRES_USER="WHATEVER_YOU_LIKE"
 POSTGRES_PASSWORD="WHATEVER_YOU_LIKE"
 POSTGRES_DB="WHATEVER_YOU_LIKE"
 
